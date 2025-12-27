@@ -1,0 +1,146 @@
+{
+  "workbench.startupEditor": "none",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.colorCustomizations": {
+    "[Vira*]": {}
+  },
+  // WORKBENCH
+  "workbench.colorTheme": "Tokyo Night",
+  "workbench.tree.enableStickyScroll": false,
+  "workbench.editor.labelFormat": "short",
+  "workbench.productIconTheme": "fluent-icons",
+  "workbench.iconTheme": "symbols",
+  "workbench.editor.empty.hint": "hidden",
+  "workbench.activityBar.location": "bottom",
+  "workbench.layoutControl.enabled": false,
+  "update.showReleaseNotes": false,
+  //EXPLORER Config
+  "explorer.compactFolders": false,
+  "explorer.sortOrder": "foldersNestsFiles",
+  "explorer.fileNesting.patterns": {
+    "package.json": ".eslint*, eslint.config.*, prettier*, tsconfig*, vite*, pnpm-*, bun.lockb, nest*, package-lock*",
+    "tailwind.config.*": "tailwind.config*, postcss.config*",
+    ".env.local": ".env*",
+    ".env": ".env*"
+  },
+  "explorer.fileNesting.enabled": true,
+  //EDITOR Config
+  
+  "editor.fontSize": 14,
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.lineHeight": 1.8,
+  "editor.tabSize": 2,
+  "editor.rulers": [
+    80,
+    120
+  ],
+  "editor.tokenColorCustomizations": {
+    "textMateRules": []
+  },
+  "editor.stickyScroll.enabled": false,
+  "editor.parameterHints.enabled": false,
+  "editor.renderLineHighlight": "gutter",
+  "editor.suggestSelection": "first",
+  "editor.fontLigatures": true,
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.accessibilitySupport": "off",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "[prisma]": {
+    "editor.formatOnSave": true
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  // Inlay hints
+  "editor.inlayHints.enabled": "on",
+  "editor.inlayHints.padding": true,
+  //TERMINAL Config
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+  //JAVASCRIPT
+  "javascript.suggest.autoImports": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  //TYPESCRIPT
+  "typescript.suggest.autoImports": true,
+  "typescript.preferences.preferTypeOnlyAutoImports": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  // ---> Golang
+  "go.inlayHints.parameterNames": true,
+  "go.inlayHints.assignVariableTypes": true,
+  "go.inlayHints.compositeLiteralFields": true,
+  "go.inlayHints.compositeLiteralTypes": true,
+  "go.inlayHints.constantValues": true,
+  "go.inlayHints.functionTypeParameters": true,
+  "go.inlayHints.rangeVariableTypes": true,
+  //SQLITE
+  "sqlite.logLevel": "DEBUG",
+  "sqlite.sqlite3": "/usr/bin/sqlite3",
+  // symbols 
+  "symbols.hidesExplorerArrows": false,
+  "symbols.files.associations": {
+    "*.module.ts": "nest",
+    "*.guard.ts": "typescript",
+    "*.spec.ts": "ts-test",
+    "*.e2e-spec.ts": "ts-test",
+    "*.mock.ts": "ts-test",
+    "vitest.config.e2e.ts": "vite",
+    ".env.development.local": "gear",
+    ".env.test.local": "gear",
+    ".env.local": "gear",
+    ".env.sst": "gear",
+    ".env.example": "gear",
+    "*.ndjson": "brackets-orange"
+  },
+  // tailwind
+  "tailwindCSS.experimental.classRegex": [
+    [
+      "tv\\(([^)]*)\\)",
+      "cva\\(([^)]*)\\)",
+      "[\"'`]([^\"'`]*).*?[\"'`]"
+    ],
+    "class:\\s*?[\"'`]([^\"'`]*).*?,",
+    "tw\\('([^']*)'\\)"
+  ],
+  //CUSTOM UI
+  "custom-ui-style.electron": {
+    "frame": false,
+    "titleBarStyle": "hiddenInset",
+    "trafficLightPosition": {
+      "x": 11,
+      "y": 10
+    },
+    "opacity": 0.96,
+    "visualEffectState": "active",
+    "vibrancy": "ultra-dark"
+  },
+  "custom-ui-style.stylesheet": {
+    ".title-label > h2": "display: none",
+    // ".editor-actions": "display: none",
+    ".nosidebar .inline-tabs-placeholder": "width: 75px",
+    ".pane-header": "padding: 0 8px",
+    ".pane-body": "padding: 8px",
+    ".split-view-view:first-child .pane-header": "display: none !important;",
+    ".monaco-list-row": "border-radius: 4px;",
+    ".monaco-workbench .monaco-list:not(.element-focused):focus:before": "display: none;"
+  },
+  "custom-ui-style.font.sansSerif": "Inter",
+  "biome.suggestInstallingGlobally": false,
+  "makefile.configureOnOpen": true,
+
+  // prisma
+  "prisma.enableCodeLens": true
+}
