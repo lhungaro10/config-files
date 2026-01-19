@@ -1,0 +1,21 @@
+{
+    "workbench.startupEditor": "none",
+    "github.copilot.nextEditSuggestions.enabled": true,
+
+    // Configurações do Editor
+    // Fonte
+
+    "editor.fontFamily": "'0xProto Nerd Font', 'Droid Sans Mono', 'monospace', 'Droid Sans Fallback'",
+    "editor.fontSize": 14,
+    "editor.indentSize": "tabSize",
+    "editor.tabSize": 2,
+    
+    // Configurações do Terminal
+    // Fonte
+    "terminal.integrated.fontFamily": "'0xProto Nerd Font Mono', 'Droid Sans Mono', 'monospace', 'Droid Sans Fallback'",
+    "terminal.integrated.fontSize": 14,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "svelte.enable-ts-plugin": true,
+    "workbench.colorTheme": "Omni Owl (Minimal Italics)",
+}
