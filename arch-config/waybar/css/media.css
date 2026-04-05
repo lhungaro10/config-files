@@ -1,0 +1,23 @@
+/* ~/.config/waybar/css/media.css */
+
+#custom-media {
+    
+    color: @blue;
+    /* Usamos rgba para um fundo azulado levemente transparente */
+    margin: 0 14px; /* 4px de distância do topo/base, 6px entre os módulos */
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 10px 15px;
+    background-color: rgba(137, 180, 250, 0.15); 
+    transition:all, .1s, ease-in
+}
+
+#custom-media:hover {
+    padding: 12px 17px
+}
+
+#custom-notification {
+    color: @yellow;
+    /* Usamos rgba para um fundo amarelado levemente transparente */
+    background-color: rgba(249, 226, 175, 0.15); 
+}

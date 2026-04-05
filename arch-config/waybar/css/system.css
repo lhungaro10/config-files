@@ -1,0 +1,36 @@
+/* ~/.config/waybar/css/system.css */
+
+#cpu {
+    color: @red;
+}
+
+#memory {
+    color: @peach;
+}
+
+#disk {
+    color: @yellow;
+}
+
+#network {
+    color: @blue;
+}
+
+#pulseaudio {
+    color: @mauve;
+}
+
+/* Fica vermelho automaticamente quando você mutar o som */
+#pulseaudio.muted {
+    color: @red;
+}
+
+#clock {
+    color: @green;
+    background-color: rgba(166, 227, 161, 0.15);
+}
+
+#tray {
+    background-color: transparent;
+    padding: 0px 0px;
+}

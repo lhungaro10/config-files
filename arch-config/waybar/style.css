@@ -1,0 +1,10 @@
+/* Importa a paleta de cores primeiro */
+@import url("css/colors.css");
+
+/* Configurações gerais da barra (fontes, resets) */
+@import url("css/base.css");
+
+/* Estilos de cada grupo de módulos */
+@import url("css/workspaces.css");
+@import url("css/media.css");
+@import url("css/system.css");

@@ -1,0 +1,112 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 32,
+    // "spacing": 8,
+    
+    // --- DISPOSIÇÃO DOS MÓDULOS ---
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "custom/media",
+        "custom/notification"
+    ],
+    "modules-right": [
+        "cpu",
+        "memory",
+        "disk",
+        "hyprland/language",
+        "network",
+        "pulseaudio",
+        "clock"
+    ],
+
+    // --- ESQUERDA: Workspaces ---
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{icon}",
+        "format-icons": {
+            "1": "", // Terminal
+            "2": "", // Código
+            "3": "", // Navegador
+            "4": "", // Mídia
+            "default": ""
+        }
+    },
+
+    "hyprland/language": {
+        "format": " {}",
+        "format-en": "US",
+        "format-pt": "BR"
+    },
+
+    // --- CENTRO: Mídia e Notificações ---
+    "custom/media": {
+        "interval": 2,
+        "format": "{icon} {text}",
+        "return-type": "json",
+        "max-length": 40,
+        "format-icons": {
+            "spotify": "",
+            "default": "🎜"
+        },
+        "escape": true,
+        // Requer o pacote 'playerctl' instalado
+        "exec": "$HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null" 
+    },
+    "custom/notification": {
+        "tooltip": false,
+        "format": "{icon}",
+        "format-icons": {
+            "notification": "<span foreground='red'><sup></sup></span>",
+            "none": "",
+            "dnd-notification": "<span foreground='red'><sup></sup></span>",
+            "dnd-none": ""
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
+    },
+
+    // --- DIREITA: Informações do Computador ---
+    "cpu": {
+        "format": " {usage}%",
+        "tooltip": true
+    },
+    "memory": {
+        "format": " {}%",
+        "tooltip-format": "{used:0.1f}GB / {total:0.1f}GB"
+    },
+    "disk": {
+        "interval": 30,
+        "format": " {percentage_used}%",
+        "path": "/"
+    },
+    "network": {
+        "format-wifi": " {essid} ({signalStrength}%)",
+        "format-ethernet": " {ipaddr}/{cidr}",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "format-disconnected": "⚠ Desconectado"
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": " Mutado",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol" // Abre o controle de volume nativo
+    },
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%d/%m/%Y}"
+    },
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    }
+}
