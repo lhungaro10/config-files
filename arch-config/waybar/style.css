@@ -1,10 +1,106 @@
-/* Importa a paleta de cores primeiro */
-@import url("css/colors.css");
+@import url("colors.css");
 
-/* Configurações gerais da barra (fontes, resets) */
-@import url("css/base.css");
+* {
+  border: none;
+  font-family:
+    "JetBrainsMono Nerd Font", "JetBrains Mono", "FiraCode Nerd Font", monospace;
+  font-size: 14px;
+  font-weight: 600;
+  min-height: 0;
+}
 
-/* Estilos de cada grupo de módulos */
-@import url("css/workspaces.css");
-@import url("css/media.css");
-@import url("css/system.css");
+window#waybar {
+  background: transparent;
+  color: @on_background;
+}
+
+tooltip {
+  background: @surface_container_high;
+  border: 1px solid @outline;
+  border-radius: 10px;
+}
+
+tooltip label {
+  color: @on_surface;
+  padding: 4px 8px;
+}
+
+#workspaces button {
+  margin: 6px 2px;
+  padding: 0 10px;
+  min-width: 22px;
+  border-radius: 999px;
+  color: @on_surface_variant;
+  background: transparent;
+  transition: all 0.2s ease;
+}
+
+#workspaces button:hover {
+  color: @on_surface;
+  background: @surface_container_high;
+}
+
+#workspaces button.active,
+#workspaces button.focused {
+  background: @primary_container;
+  color: @primary;
+}
+
+#clock,
+#network,
+#pulseaudio,
+#hyprland-language,
+#custom-media,
+#battery,
+#mode {
+  margin: 6px 4px;
+  padding: 0 12px;
+  min-height: 24px;
+  border-radius: 999px;
+  background: @surface_container;
+  color: @on_surface;
+}
+
+#clock {
+  color: @primary;
+}
+
+#network {
+  color: @secondary;
+}
+
+#pulseaudio {
+  color: @tertiary;
+}
+
+#hyprland-language {
+  color: @on_primary_container;
+  background: @primary_container;
+}
+
+#battery {
+  color: @on_primary_container;
+  background: @primary_container;
+}
+
+#battery.charging {
+  color: @on_tertiary_container;
+  background: @tertiary_container;
+}
+
+@keyframes blink {
+  to {
+    background: @error;
+    color: @on_error;
+  }
+}
+
+#battery.warning:not(.charging) {
+  background: @error;
+  color: @on_error;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(12);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
